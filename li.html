@@ -1,0 +1,72 @@
+<html>
+	<head>	
+		<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>		
+		<title>Login </title>
+		<style>
+		body {
+			font-family: 'Roboto Mono', sans-serif;
+			font-size:20px;
+			background-color: #e0e0e0;
+		}
+		
+
+		form {
+			border: 3px solid #f1f1f1;
+		}
+
+		input[type=text], input[type=password] {
+		    width:50%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    box-sizing: border-box;
+		}
+
+		button {
+		    background-color: #87CEFA;
+		    color: white;
+		    padding: 14px 20px;
+		    margin: 8px 0;
+		    border: none;
+		    cursor: pointer;
+		    width: 60%;
+		}
+
+		button:hover {
+		    opacity: 0.8;
+		}
+		
+		.container {
+   		 padding: 16px;
+		}
+		
+		}</style>
+		
+		<script>
+			function validate()
+			{
+			if(document.f.username.value.length<3)
+				{
+					alert("the name length should be more than 3");
+					document.Eval.Name.focus();
+          				return false;
+        			}
+			}
+		</script>
+	</head>
+
+	<body>
+		<h2>LOGIN</h2><hr /><br />
+		<form name="f" method="POST" onsubmit="validate()" action="con.php"><div class="container">
+			<b>Username:</b> 
+			<input type="text" name="username" placeholder="enter your username" required></input><br />
+			<b>Password:</b> 
+			<input type="password" name="password" placeholder="enter your password" required></input><br />
+			<button type="submit" name="submit">Enter</button>
+		</form>
+	</body>
+</html>
+			
+
+
